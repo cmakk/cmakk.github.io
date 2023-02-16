@@ -1,0 +1,650 @@
+:root {
+	--dark-violet: hsl(256, 26%, 20%);
+	--grayish-blue: hsl(216, 30%, 68%);
+	--vdark-violet: hsl(270, 9%, 17%);
+	--dark-gray: hsl(273, 4%, 51%);
+	--vlight-gray: hsl(0, 0%, 98%);
+	
+	font-family: 'Karla', sans-serif;
+	font-size: 16px;
+	line-height: 1.5rem;
+
+}
+
+html, body {
+	min-height: 100vh;
+	width: 100vw;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+h1, h2, h3 {
+	font-family: 'DM Serif Display', serif;
+	font-size: 4rem;
+	font-weight: 400;
+	line-height: 3.5rem;
+	margin: 0;
+}
+
+
+
+/* ------------------------------- NAVIGATION BAR ------------------------------- */
+.header {
+	background-color: #FFF;
+	z-index: 10;
+	position: fixed;
+	width: 100%;
+	border-bottom: 2px solid var(--vdark-violet);
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem 0;
+	text-align: center;
+	box-sizing: border-box;
+	margin: 0 10.5rem 0 9.5rem;
+}
+
+.nav-menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-item {
+	list-style: none;
+	text-transform: uppercase;
+	margin-left: 0.25rem;
+}
+
+.nav-link {
+	color: var(--dark-gray);
+	padding: 0.25rem 1rem;
+}
+
+.nav-link:hover {
+	color: #000;
+}
+
+.nav-link#plans {
+	border: 2px solid #000;
+	color: #000;
+}
+
+.nav-link#plans:hover {
+	background-color: #000;
+	color: #FFF;
+}
+
+.hamburger {
+	display: none;
+	border: 0px;
+}
+
+/* ------------------------------- BG IMAGES ------------------------------- */
+.bg-top {
+	position: absolute;
+	top: 0;
+	right: 0;
+	max-width: 30vw;
+	z-index: 2;
+}
+
+.bg-left {
+	position: absolute;
+	top: 33rem;
+	left: 0;
+	max-width: 10vw;
+	z-index: 2;
+}
+
+
+
+/* ------------------------------- HERO SECTION ------------------------------- */
+.hero {
+	display: grid;
+	position: absolute;
+	top: 4.5rem;
+	grid-template: repeat(2, auto) / repeat(2, 1fr);
+	width: 100vw;
+	position: relative;
+}
+
+.hero-content {
+	grid-area: 1 / 1 / span 1 / span 2;
+	background-color: var(--dark-violet);
+	overflow: hidden;
+}
+
+.hero-text {
+	grid-area: 1 / 1 / span 1 / span 1;
+	color: #FFF;
+	max-width: 37vw;
+	padding: 6.5rem 9.5rem;
+}
+
+.partial-border-white {
+	width: 10vw;
+	border-top: 1.5px solid #FFF;
+	margin-bottom: 3rem;
+}
+
+.hero-text h1, .hero-text p {
+	margin-bottom: 1.5rem;
+}
+
+.hero-text h1 {
+	max-width: 15ch;
+}
+
+button.view-plans {
+	background-color: transparent;
+	border: 1px solid #FFF;
+	border-radius: 0px;
+	font-family: inherit;
+	text-transform: uppercase;
+	letter-spacing: inherit;
+	padding: 0.5rem;
+	width: 30%;
+	margin-bottom: 3rem;
+}
+
+button.view-plans a {
+	color: #FFF;
+}
+
+button.view-plans:hover, button.view-plans:hover a {
+	background-color: #FFF;
+	color: var(--vdark-violet);
+	cursor: pointer;
+}
+
+.hero-pic {
+	grid-area: 1 / 2 / span 2 / span 1;
+	justify-self: end;
+	align-self: start;
+	margin-top: 6.5rem;
+	margin-right: 11.5rem;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.hero-pic img {
+	max-width: 35vw;
+	z-index: 1;
+}
+
+/* ------------------------------- MAIN SECTION ------------------------------- */
+.main {
+	margin: 0 11.5rem 0 9.5rem;
+	position: relative;
+	padding-top: 9.5rem;
+}
+
+.partial-border-grey {
+	width: 10vw;
+	border-top: 1.5px solid hsl(0, 0%, 80%);
+	margin-bottom: 3.5rem;
+}
+
+.main h1 {
+	margin-bottom: 5rem;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	
+	justify-content: space-between;
+	align-items: center;
+	max-width: 100%;
+}
+
+#features {
+	display: flex;
+	gap: 2rem;
+	margin-bottom: 7rem;
+}
+
+[class*="feature-"] h3 {
+	font-size: 1.5rem;
+	padding: 0;
+}
+
+.banner {
+	background-color: var(--vdark-violet);
+	background-image: url("images/bg-pattern-how-we-work-desktop.svg");
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-size: contain;
+	padding: 2rem 3rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 7rem;
+}
+
+.banner h2 {
+	color: #FFF; 
+	font-size: 2.5rem;
+	line-height: 2.5rem;
+}
+
+.banner button {
+	border: 0px;
+}
+
+.banner button, .banner a {
+	background-color: #FFF;
+	color: var(--vdark-violet);
+	text-transform: uppercase;
+	font-family: inherit;
+	padding: 0.5rem 0.75rem;
+	cursor: pointer;
+}
+
+.banner button:hover, .banner a:hover {
+	background-color: var(--grayish-blue);
+	color: #FFF;
+}
+
+.banner button:active, .banner a:active {
+	background-color: transparent;
+}
+
+/* ------------------------------- FOOTER ------------------------------- */
+.footer {
+	width: 100vw;
+	background-image: url("images/bg-pattern-footer-desktop.svg");
+	background-position:  top left;
+	background-repeat: no-repeat;
+	background-size: 30vw;
+	background-color: var(--vlight-gray);
+	box-sizing: border-box;
+	padding: 3rem 11.5rem 3rem 9.5rem;
+}
+
+.connect {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid grey;
+}
+
+.fa-brands {
+	padding-left: 0.5rem;
+	color: grey;
+}
+
+.fa-brands:hover {
+	color: #000;
+}
+
+.footer-links {
+	padding-top: 0.5rem;
+	display: flex;
+	flex-direction: row;
+	text-transform: uppercase;
+	color: grey;
+}
+
+[class*="links-col-"] {
+	width: 25%;
+}
+
+.footer h4 {
+	margin-bottom: 0;
+}
+
+.footer ul {
+	padding-left: 0;
+}
+
+.footer-item, .footer-item a {
+	list-style: none;
+	color: #000;
+	font-weight: bold;
+	line-height: 2rem;
+}
+
+.footer-item a:hover {
+	text-decoration: underline;
+}
+
+.footer-item a:active {
+	background-color: var(--grayish-blue);
+}
+
+
+
+
+/* ------------------------------- RESPONSIVE: DIFFERENT DEVICES ------------------------------- */
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+	h1 {
+		font-size: 3rem;
+	}
+	
+	.partial-border, button.view-plans {
+		width: 40%;
+	}
+	
+	.hero-text {
+		max-width: 30vw;
+	}
+	
+	.hero-pic {
+		grid-area: 1 / 2 / span 1 / span 1;
+		margin-bottom: 6.5rem;	
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	:root {
+		font-size: 13px;
+	}
+	
+	/* ------------------------------- NAVIGATION BAR ------------------------------- */
+	.header { 
+		border: none; 
+		display: flex;
+		align-items: center;
+	}
+	
+	.navbar {
+		padding: 2rem 0;
+		width: 100vw;
+		margin: 0 5rem;
+	}
+	
+	.nav-menu {
+		position: fixed;
+        left: -150%;
+        top: 5rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: var(--vdark-violet);
+        background-image: url('images/bg-pattern-mobile-nav.svg');
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        transition: 0.3s;
+	}
+	
+	.nav-menu.active {
+        left: 0;
+        margin: 0;
+        padding: 0;
+        padding-top: 1rem;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+        padding: 0.75rem;
+        letter-spacing: 0.15rem;
+        width: 80vw;
+    }
+    
+    .nav-link {
+    	color: #FFF;
+    	max-width: 80vw;
+    }
+    
+    .nav-item:hover {
+    	border: 1px solid #FFF;
+    	color: #FFF;
+    }
+    
+    .nav-link:hover {
+    	color: #FFF;
+    }
+    
+    .nav-link#plans:hover {
+		background-color: transparent;
+	}
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        vertical-align: middle;
+        right: 5rem;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+    .header img {
+    	max-height: 3rem;
+    }
+    
+	/* ------------------------------- DECREASE MARGINS ------------------------------- */
+	.hero-text {
+		padding-left: 5rem;
+	}
+	
+	.hero-pic {
+		margin-right: 6rem;
+	}
+	
+	.main {
+		margin: 0 6rem 0 5rem;
+	}
+	
+	.footer {
+		padding-left: 5rem;
+		padding-right: 6rem;
+	}
+	
+}
+
+@media only screen and (max-width: 700px) {
+	:root {
+		font-size: 3vw;
+	}
+	
+	p {
+		font-size: 4.5vw;
+		line-height: 1.5;
+		padding-bottom: 1rem;
+	}
+	
+	::-webkit-scrollbar { display: none; }
+	
+	.navbar {
+		margin: 0 1.5rem;
+	}
+	
+	.hamburger {
+        right: 1.5rem;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+	/* ------------------------------- HERO SECTION ------------------------------- */
+	.bg-top, .bg-left { display: none; };
+			
+	.wrapper {
+		width: 100vw;
+		margin: 0;
+		padding: 0;
+	}
+		
+	.hero {
+		position: relative;
+		width: 100vw;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.hero-pic, .hero-pic img {
+		display: flex;
+		min-width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.hero-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100vw;
+		padding-top: 7rem;
+		padding-bottom: 7rem;
+		background-image: url('images/bg-pattern-intro-left-mobile.svg'), url('images/bg-pattern-intro-right-mobile.svg');
+		background-position: top left, bottom -200px right;
+		background-repeat: no-repeat;
+	}
+	
+	.hero-text {
+		display: flex;
+		flex-direction: column;
+		max-width: 85vw;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.hero-text button, .hero-text h1 {
+		margin: 0;
+	}
+	
+	button.view-plans {
+		width: 50%;
+	}
+		
+	.partial-border-white { display: none; }
+	
+	/* ------------------------------- MAIN SECTION ------------------------------- */
+	.main {
+		margin: 0;
+		padding: 0;
+		padding-top: 10rem;
+		padding-bottom: 14rem;
+		position: relative;
+		top: 4.5rem;
+		text-align: center;
+		width: 100vw;
+		background-image: url("images/bg-pattern-intro-right-mobile.svg");
+		background-position: top -130px right;
+		background-repeat: no-repeat;
+	}
+	
+	.partial-border-grey {
+		width: 30vw;
+		margin: auto;
+		margin-bottom: 2rem;
+	}
+	
+	.container {
+		margin-bottom: 2rem;
+	}
+	
+	#features {
+		display: flex;
+		flex-direction: column;
+		width: 95vw;
+	}
+	
+	#features h3 {
+		font-size: 2rem;
+		padding: 0;
+	}
+	
+	.banner {
+		width: 90vw;
+		margin: auto;
+		padding: 5rem 2rem;
+		flex-direction: column;
+		box-sizing: border-box;
+		background-image: url('images/bg-pattern-how-we-work-mobile.svg');
+	}
+	
+	.banner h2 {
+		font-size: 4rem;	
+		line-height: 1;	
+		padding-bottom: 2rem;
+	}
+	
+	.banner button {
+		border: 1px solid #FFF;
+	}
+	         
+	.banner button, .banner a {
+		background-color: transparent;
+		color: #FFF;
+		text-transform: uppercase;
+		font-family: inherit;
+		padding: 0.5rem 0.75rem;
+		cursor: pointer;
+	}
+	
+	/* ------------------------------- FOOTER ------------------------------- */
+	.footer {
+		position: relative;
+		background-image: url("images/bg-pattern-footer-mobile.svg");
+		background-size: 100vw;
+		padding: 2rem;
+	}
+	
+	.connect {
+		display: flex;
+		flex-direction: column;
+		padding-top: 6rem;
+	}
+	
+	.footer.logo {
+		height: 1.5rem;
+		padding-bottom: 2rem;
+	}
+	
+	.fa-brands {
+		margin: 0; 
+		padding: 0;
+		padding-top: 1rem;
+		padding-bottom: 2rem;
+		font-size: 2rem;
+		text-align: center;
+		width: 3.5rem;
+	}
+	
+	.footer-links {
+		padding: 1rem;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	
+	[class*="links-col-"] {
+		width: 100%;
+	}
+	
+	.footer-item {
+		line-height: 2.5;
+	}
+	
+	.footer h4 {
+		padding-bottom: 1rem;
+	}
+}
